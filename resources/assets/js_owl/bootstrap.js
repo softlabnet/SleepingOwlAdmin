@@ -87,3 +87,4 @@ require('./admin/form/image');
 require('./admin/form/images');
 require('./admin/events');
 require('./admin/form/related');
+require('./admin/form/treeselect');
