@@ -59,14 +59,16 @@ module.exports = (function() {
          * Запуск всех модулей
          */
         boot () {
+console.log(modules);
             _.each(_.sortBy(modules, function (module) {
                 return module.priority
             }), (module, name) => {
-                try {
+console.log(module);
+                //try {
                     module.callback();
-                } catch (e) {
-                    Admin.log(`Error with loading module ${name}`, 'Modules');
-                }
+                //} catch (e) {
+                //    Admin.log(`Error with loading module ${name}`, 'Modules');
+                //}
             })
         }
     }
