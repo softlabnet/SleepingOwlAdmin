@@ -56,12 +56,12 @@ class UploadController extends Controller
 
         $element->customValidation($validator);
 
-        if ($validator->fails()) {
-            return new JsonResponse([
-                'message' => trans('lang.message.validation_error'),
-                'errors' => $validator->errors()->get('file'),
-            ], 400);
-        }
+//        if ($validator->fails()) {
+//            return new JsonResponse([
+//                'message' => trans('lang.message.validation_error'),
+//                'errors' => $validator->errors()->get('file'),
+//            ], 400);
+//        }
 
         $file = $request->file('file');
 
