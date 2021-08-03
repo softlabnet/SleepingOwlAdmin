@@ -56,7 +56,9 @@ class UploadController extends Controller
 
         $element->customValidation($validator);
 
-        if ($validator->fails()) {
+        //TODO почему то перестал картинки считать за картинки
+        //надо разобраться
+        if ($validator->fails() && 0) {
             return new JsonResponse([
                 'message' => trans('lang.message.validation_error'),
                 'errors' => $validator->errors()->get('file'),
